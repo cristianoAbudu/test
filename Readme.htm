@@ -1,0 +1,241 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Título 1 Char";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.Ttulo1Char
+	{mso-style-name:"Título 1 Char";
+	mso-style-link:"Título 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1>Sobre Este Documento</h1>
+
+<p class=MsoNormal>O objetivo deste documento é explicar as decisões tomadas
+durante o desenvolvimento da aplicação para o teste. Foi salvo em HTML
+diretamente do Word, embora o HTML gerado não seja o melhor possível, os ganhos
+em facilidade de composição do documento e possibilidade de efetuar a leitura
+do mesmo via browser diretamente do repositório de controle de versão
+compensam.</p>
+
+<h1>Tempo Gasto</h1>
+
+<p class=MsoNormal>Início do teste: 22/06/2016 – 13:30<br>
+Final do teste: 22/06/2016 – 20:16<br>
+Tempo de Duração: 6h45m (com interrupções)</p>
+
+<h1>Modelagem do Negócio: O que será armazenado?</h1>
+
+<p class=MsoNormal>Para atender as especificações do teste, decidi armazenar tarefas,
+por ser um conceito bastante presente no dia a dia profissional e conter itens
+bacanas para exemplificar um bom uso de cada componente proposto no teste:</p>
+
+<p class=MsoNormal><b>Campo de texto: Descrição</b>        </p>
+
+<p class=MsoNormal><b>Checkbox: Realizada </b></p>
+
+<p class=MsoNormal>                Uma tarefa foi realizada ou não</p>
+
+<p class=MsoNormal><b>Combobox: Status</b></p>
+
+<p class=MsoNormal>                Um bom exemplo para demonstração de um combo
+Box, onde é há mais de 2 opções e é relevante visualizar apenas a opção
+selecionada (o universo de opções não é tão importante aqui).<b>             </b></p>
+
+<p class=MsoNormal>                                No prazo</p>
+
+<p class=MsoNormal>                                Atrasada</p>
+
+<p class=MsoNormal>                               Cancelada           </p>
+
+<p class=MsoNormal><b>Radio Button: Avaliação</b></p>
+
+<p class=MsoNormal>                Um bom exemplo do uso do Radio Button, já
+que mostra além de uma única opção selecionada, todas as possíveis opções.</p>
+
+<p class=MsoNormal style='margin-left:35.4pt'>                Ruim</p>
+
+<p class=MsoNormal style='margin-left:35.4pt'>                Regular</p>
+
+<p class=MsoNormal style='margin-left:35.4pt'>                Bom</p>
+
+<p class=MsoNormal style='margin-left:35.4pt'>                Ótimo</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1>Decisões de Modelagem do Banco de Dados</h1>
+
+<p class=MsoNormal>Embora o Hibernate possua opção para gerar automaticamente o
+esquema de dados, optei por criar a tabela na mão e fornecer o SQL, para
+demonstrar que possuo o conhecimento da linguagem e também pelo fato de
+normalmente nas empresas (principalmente as maiores) não permitirem que a
+aplicação crie sozinha os bancos de dados.</p>
+
+<p class=MsoNormal>Optei pela criação da tabela com os nomes do schema e tabela
+maísculos com underline e campos minúsculos, para demonstrar o uso das opções
+de persistência do JPA: se o nome dos itens do banco de dados forem diferentes
+dos da classe, é possível configurar(como ocorre no nome da tabela), ao passo
+que se a classe e a tabela tiverem os mesmos nomes o framework fará o bind
+automático (como ocorre com as colunas).</p>
+
+<h1>Versão do Projeto</h1>
+
+<p class=MsoNormal style='margin-bottom:15.0pt;line-height:15.0pt'>Foi atribuído
+ a mesma versão especificada no data para todos os projetos (<span
+style='font-size:9.0pt;font-family:Consolas;color:#333333;background:white'>0.0.1-SNAPSHOT</span>).</span></p>
+
+<h1><span class=apple-converted-space><span style='background:white'>Ambiente </span></span></h1>
+
+<p class=MsoNormal>Banco de Dados: MySql (conforme especificado) versão 5.7 <br>
+Servidor de Aplicações: Como não foi especificado no teste usei para testes o Pivotal
+TcServer c3.1 que tenho instalado. Porém a aplicação deve funcionar em qualquer
+container.<br>
+IDE: Spring Tool Suite (baseado no Eclipse)</p>
+
+<h1>Nomenclatura de Pacotes</h1>
+
+<p class=MsoNormal>Foi utilizado o pacote org.fiveware como padrão (extraído do
+group-id do projeto). Foi adicionado o pacote “test” para identificar que o
+pacote pertence À aplicação test dentro de “org.fiveware”.</p>
+
+<h1>Uso do TDD</h1>
+
+<p class=MsoNormal>Utilizei metodologia TDD para desenvolver a aplicação de
+teste. Por isso precisei incluir o junit com scope test no parent. As classes
+de teste estão em pacotes com o mesmo nome do pacote da classe de origem. As
+classes foram nomeadas com o mesmo nome da que testam, adicionado  o sufixo “TestSuite”.
+Cada método foi nomeado com o sufixo “Test” obedecendo as boas práticas para
+classes de teste. Por uma restrição de tempo apenas itens importantes do ponto
+de vista de negócios receberam testes.</p>
+
+<p class=MsoNormal><span class=Ttulo1Char><span style='font-size:14.0pt;
+line-height:115%'>Dificuldades<br>
+</span></span>Tive certa dificuldade para  configurar o Spring MVC sem XML no
+projeto web na aplicação criada do zero. Então baixei e adaptei a aplicação web
+do mykong (<a
+href="http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/">http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/</a>)
+, adaptando e removendo o que era desnecessário até que ela se tornou o fiveware-test-web
+entregue.</p>
+
+<h1>Composição de Interface</h1>
+
+<p class=MsoNormal>Optei por não utilizar totalmente os compontentes do Spring
+form para gerar o formulário, em vez disso enriqueci o exemplo utilizando HTML puro
+para os comboxes e o input de texto e fiz uso do form do Spring para gerar o
+combo Box e o radio box. A captura dos campos e submissão via Ajax é feita com JQuery.
+</p>
+
+<h1>Utilização de serviço REST com JSON</h1>
+
+<p class=MsoNormal>Utilizei um serviço REST para receber os dados da tela para
+tornar a aplicação mais desacoplada e orientada a serviços.</p>
+
+<h1>Classes no Projeto de Modelo</h1>
+
+<p class=MsoNormal>Para enriquecer o exemplo, utilizei Enums para representar
+os comboxes e checkboxes. Para receber os dados da tela foi criado um DTO e
+para representar a tabela do banco de dados uma classe Entidade. O controller
+faz o mapeamento entre o DTO usado em tela e a entidade usada no banco. Essa
+abordagem permite uma flexibilidade maior entre o que é apresentado em tela e o
+que é guardado em banco de dados. Optei por colocar essas classes no projeto de
+modelo por elas representarem o modelo de negócios, não apenas o modelo de
+dados, estando assim visíveis para toda a aplicação.</p>
+
+<h1>Localização dos Repositories</h1>
+
+<p class=MsoNormal>A princípio pensei em colocar as classes Repository no
+projeto de service, e não no model, de modo a garantir que o model gere um jar
+limpo apenas com as classes de modelo, item de desacoplamento bastante útil em
+muitas arquiteturas e considerado boa prática. Porém pelo fato da entidade precisar
+da anotação @Entity para o Hibernate, optei por colocar também o repository no projeto
+de modelo. Desse modo o projeto de modelo contém agora dependência do hibernate
+e do Spring. </p>
+
+<h1>Repository ou DAO?</h1>
+
+<p class=MsoNormal>Apesar do Hibernate normalmente usar DAOs achei melhor para
+o exemplo usar Repository. Basicamente porque prefiro passar o objeto de
+negócio (DTO) para o Repository e o Repository fica encarregado de fazer a
+tradução entre o objeto de negócio (DTO) e o objeto de modelo (Entity).</p>
+
+<h1>Credenciais do Banco de Dados usados</h1>
+
+<p class=MsoNormal>As credenciais do banco de dados foram especificadas no
+arquivo application.properties dentro do projeto de modelo. Segue dados usados
+em ambiente local para testes:</p>
+
+<p class=MsoNormal>                Porta: 3306</p>
+
+<p class=MsoNormal>                User: root</p>
+
+<p class=MsoNormal>                Senha: mysql</p>
+
+</div>
+
+</body>
+
+</html>
